@@ -85,7 +85,7 @@ SSphere spheres[2];
 SLight light;
 SMaterial materials[6];
 
-STracingRay Stack[100];
+STracingRay Stack[1000];
 int Iter = -1;
 
 /*** GENERATE RAY FUNCTION ***/
@@ -412,6 +412,7 @@ void main ()
 	pushRay(trRay);
 	while(!IsEmpty())
 	{
+		bool fromOutside;
 		 STracingRay trRay = popRay();
 		 ray = trRay.ray;
 		 if(trRay.depth>5){
@@ -450,34 +451,30 @@ void main ()
 
 				case GLASS_REFRACTION:
 				{
+					bool fromOutside = dot(intersect.Normal, ray.Direction) < 0.0;
+					float contribution;
+					vec3 refractDirection;
 
-				if(Count%2==0)
+					if(intersect.RefractionCoef > 1)
 					{
-						if(intersect.RefractionCoef > 1)
-						{
 							float contribution = trRay.contribution * (intersect.RefractionCoef-1.1);
 							float shadowing = Shadow(light, intersect);
 							resultColor += contribution * Phong (intersect, light,shadowing,uCamera);
-						}
-					 vec3 refractDirection = refract(ray.Direction, intersect.Normal,1/1.5);
-					 float contribution = 0.1;
-					 STracingRay refractRay = STracingRay(SRay(intersect.Point + refractDirection * EPSILON, refractDirection), contribution, trRay.depth + 1);
-					 pushRay(refractRay);
+					}
+					if (fromOutside){
+						refractDirection = refract(ray.Direction, intersect.Normal,1/1.3);
+						contribution = 0.1;
+					}
+					else {
+						refractDirection = -refract(ray.Direction, intersect.Normal, 1.3);
+						contribution = 0.7;
 					}
 
-					if(Count%2==1){
-						if(intersect.RefractionCoef > 1)
-						 {
-							 float contribution = trRay.contribution * (intersect.RefractionCoef-1.1);
-							 float shadowing = Shadow(light, intersect);
-							 resultColor += contribution * Phong (intersect, light,shadowing,uCamera);
-						 }
-					 vec3 refractDirection = refract(-ray.Direction, -intersect.Normal,1.5);
-					 float contribution = 0.7;
+
 					 STracingRay refractRay = STracingRay(SRay(intersect.Point + refractDirection * EPSILON, refractDirection), contribution, trRay.depth + 1);
 					 pushRay(refractRay);
-					}					 
-					 Count+=1;
+					
+
 					 break;
 				}
 			} 
