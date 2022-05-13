@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "X3vTJB496kUwuAGapI/kt8zW2PJ2ebGm+AeV/8cmFzcXjMTLVtvC9GHsfrxyfYuLuueEo7AiQ5WnwwEt8Em2Kw==",
+  "success": true,
+  "projectFilePath": "D:\\Study\\ComputerGraphic\\RayTracing\\RayTracing.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\opentk\\4.7.2\\opentk.4.7.2.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\opentk.compute\\4.7.2\\opentk.compute.4.7.2.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\opentk.core\\4.7.2\\opentk.core.4.7.2.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\opentk.graphics\\4.7.2\\opentk.graphics.4.7.2.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\opentk.input\\4.7.2\\opentk.input.4.7.2.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\opentk.mathematics\\4.7.2\\opentk.mathematics.4.7.2.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\opentk.openal\\4.7.2\\opentk.openal.4.7.2.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\opentk.redist.glfw\\3.3.7.25\\opentk.redist.glfw.3.3.7.25.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\opentk.windowing.common\\4.7.2\\opentk.windowing.common.4.7.2.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\opentk.windowing.desktop\\4.7.2\\opentk.windowing.desktop.4.7.2.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\opentk.windowing.graphicslibraryframework\\4.7.2\\opentk.windowing.graphicslibraryframework.4.7.2.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.drawing.common\\5.0.0\\system.drawing.common.5.0.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
